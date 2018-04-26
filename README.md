@@ -1,0 +1,5 @@
+# javamybatis
+mybatis
+基本的mybatis创建及使用
+包含简单的selectall查询
+主要是基本maven创建及使用和基本mybaits小
