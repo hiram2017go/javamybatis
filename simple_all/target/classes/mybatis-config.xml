@@ -6,8 +6,11 @@
 <configuration>
     <settings>
         <setting name="logImpl" value="LOG4J"/>   <!--指定使用LOG4J输出日志-->
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
     </settings>
-    
+
     <typeAliases> <!--配置包的别名-->
         <package name="tk.mybatis.simple.model"/>
     </typeAliases>
@@ -29,7 +32,8 @@
 
     <!--Mybatis的SQL语句和映射文件-->
     <mappers>
-        <mapper resource="tk/mybatis/simple/mapper/CountryMapper.xml"/>
+       <!-- <mapper resource="tk/mybatis/simple/mapper/CountryMapper.xml"/>-->
+        <package name="tk.mybatis.simple.mapper"/>  <!--自动扫描包下所有接口, == 上一行所写的所有xml文件-->
     </mappers>
 
 </configuration>

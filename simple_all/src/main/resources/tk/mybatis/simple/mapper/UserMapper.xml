@@ -40,6 +40,7 @@
         select * FROM sys_user WHERE id = #{id}
     </select>
 
+    <!--因为selectAll返回多个结果-->
     <select id="selectAll" resultType="tk.mybatis.simple.model.SysUser">
         select id, user_name userName, user_password userPassword, user_email userEmail,
               user_info userInfo, head_img headImg, create_time createTime from sys_user
